@@ -1,0 +1,510 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 17px;
+}
+
+body {
+    width: 100%;
+    background-color: white;
+    font-family: Helvetica, sans-serif;
+}
+.toggle{
+    color:black;
+    height: 2em;
+    font-size: 2em;    
+    text-align: right;
+    padding: 0.5em;
+    display: none;    
+}
+
+
+.cabeca {
+    display: flex;
+    flex-direction: row;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    align-items: center;  
+    margin-top: 2em;
+    margin-bottom: 1em;  
+
+}
+
+.menu ul{
+    list-style: none;
+    display: flex;    
+    
+}
+
+.menu li{
+    margin-left: 2em;
+    font-size: 1.2rem;    
+}
+
+.menu li a{
+    text-decoration: none;
+    color: black;
+    transition: .2s;
+}
+.menu li a:hover{
+    color: red;
+}
+.logo {
+    width: 100px;
+    
+    
+}
+.banner{
+    width: 100%;
+    height: 450px;
+    background: url('../IMG/banner.jpg');
+    background-size: cover;  
+    margin-bottom: 2em; 
+    
+}
+
+.corpo{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.corpo h1{
+    font-size: 1.5rem;
+    margin-bottom: 3rem;
+}
+.planos{
+    display: flex;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    justify-content: space-between;
+    margin-top: 3em;
+}
+.plano1{
+    background: #D7F9F8;
+    border-radius: 10px 10px;
+    box-shadow: 5px 5px 10px rgba(62, 62, 71, 0.527);
+    padding: 1em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-right: 1em;
+}
+.plano1 p{
+    text-align: justify;
+    margin-bottom: 1em;
+    margin-top: 2em; 
+}
+.plano2{
+    background: #D7F9F8;
+    border-radius: 10px 10px;
+    box-shadow: 5px 5px 10px rgba(62, 62, 71, 0.527);
+    padding: 1em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.plano2 p{
+    text-align: justify;
+    margin-bottom: 1em;
+    margin-top: 2em; 
+}
+.plano3{
+    background: #D7F9F8;
+    border-radius: 10px 10px;
+    box-shadow: 5px 5px 10px rgba(62, 62, 71, 0.527);
+    padding: 1em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-left: 1em;
+}
+.plano3 p{
+    text-align: justify;
+    margin-bottom: 1em;
+    margin-top: 2em;    
+}
+.preco{
+    margin-bottom: 1em;
+}
+.planos input{
+    background: rgb(81, 179, 170);
+    padding: 1em;
+    border-radius: 50%;
+    border: 1px solid rgb(17, 37, 35);
+}
+
+.timeline h2{
+    margin-bottom: 1em;
+}
+
+
+
+
+
+
+/* The actual timeline (the vertical ruler) */
+.timeline {
+    position: relative;
+    width: 80%;
+    max-width: 1366px;
+    margin: 0 auto;
+}
+
+/* The actual timeline (the vertical ruler) */
+.timeline::after {
+    content: '';
+    position: absolute;
+    width: 6px;
+    background-color: rgb(81, 179, 170);
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    margin-left: -3px;
+    height: 36em;
+}
+
+/* Container around content */
+.container {
+    padding: 10px 40px;
+    position: relative;
+    background-color: inherit;
+    width: 50%;
+}
+
+/* The circles on the timeline */
+.container::after {
+    content: '';
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    right: -17px;
+    background-color: white;
+    border: 4px solid #FF9F55;
+    top: 15px;
+    border-radius: 50%;
+    z-index: 1;
+}
+
+/* Place the container to the left */
+.left {
+    left: 0;
+}
+
+/* Place the container to the right */
+.right {
+    left: 50%;
+}
+
+/* Add arrows to the left container (pointing right) */
+.left::before {
+    content: " ";
+    height: 0;
+    position: absolute;
+    top: 22px;
+    width: 0;
+    z-index: 1;
+    right: 30px;
+    border: medium solid white;
+    border-width: 10px 0 10px 10px;
+    border-color: transparent transparent transparent white;
+}
+
+/* Add arrows to the right container (pointing left) */
+.right::before {
+    content: " ";
+    height: 0;
+    position: absolute;
+    top: 22px;
+    width: 0;
+    z-index: 1;
+    left: 30px;
+    border: medium solid white;
+    border-width: 10px 10px 10px 0;
+    border-color: transparent white transparent transparent;
+}
+
+/* Fix the circle for containers on the right side */
+.right::after {
+    left: -16px;
+}
+
+/* The actual content */
+.content {
+    padding: 20px 30px;
+    background-color: #D7F9F8;
+    position: relative;
+    border-radius: 6px;
+}
+
+
+/* Media queries - Responsive timeline on screens less than 600px wide */
+@media screen and (max-width: 800px) {
+  /* Place the timelime to the left */
+  .timeline {
+    position: relative;
+    width: 90%;}
+
+  
+  .timeline::after {
+    left: 31px;
+  }
+
+  .content {
+    width: 100%;
+  }
+  
+  /* Full-width containers */
+  .container {
+    width: 100%;
+    padding-left: 70px;
+    padding-right: 25px;
+  }
+  
+  /* Make sure that all arrows are pointing leftwards */
+  .container::before {
+    left: 60px;
+    border: medium solid white;
+    border-width: 10px 10px 10px 0;
+    border-color: transparent white transparent transparent;
+  }
+
+  /* Make sure all circles are at the same spot */
+  .left::after, .right::after {
+    left: 15px;
+  }
+  
+  /* Make all right containers behave like the left ones */
+  .right {
+    left: 0%;
+  }
+}
+
+.rod{
+    display: flex;
+    margin-top: 2em;
+
+}
+.rod2{
+    border-top: 1px solid black;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;
+}
+.rod2 img{
+    margin-top: 1em;
+}
+
+.redes{
+    margin-top: 2em;
+    margin-left: 2em;
+    display: flex;
+    justify-content: center;
+    align-items: center;    
+    flex-direction: column;
+}
+.icons{
+
+    margin-top: 1em;
+    font-size: 20px;
+    color: gray;
+
+}
+.localiza{
+    background: lightblue;
+    margin-right: 2em;
+    margin-top: 2em;
+    text-align: center;
+    padding: 0.5em;
+}
+
+.chat{
+    width: 50px;
+    height: 50px;
+    background: rgb(23, 135, 209);
+    position: fixed;
+    right: 2rem;
+    bottom: 0.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid rgb(5, 43, 5);
+    border-radius: 50%;
+}
+.chat i{
+    font-size: 30px;
+    color: rgb(66, 223, 79);    
+}
+@media screen and (max-width:984px){
+    .timeline::after {
+        height: 39em;
+    }
+
+
+    .telefone{
+        width: 25%;
+    }
+    .planos{
+        flex-direction: column;
+    }
+    .plano1{
+        margin: 0;
+        margin-bottom: 3em;
+    }
+    .plano3{        
+        margin: 0;
+        margin-top: 3em;
+    }
+    }
+
+    @media(max-width:800px){
+        .timeline::after {
+            height: 35em;
+        }
+    }
+    
+    
+    @media(max-width:720px){
+     .cabeca{
+                justify-content: center;
+                align-items: center;
+                justify-content: space-between;
+            }
+    .toggle{
+         display: flex;            
+        
+     }
+    
+            
+        
+    .menu ul{
+         flex-direction: column;
+         display: none;  
+     }
+    .menu ul.active{
+         display: flex;
+    }
+        
+    
+        .formulario{
+            display: flex;
+            flex-direction: column;
+            align-items: center;       
+    
+        }
+        .pessoal{
+            width: 70%;
+        }
+    
+        .msg{
+            width: 70%;
+        }
+        .rod2{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+    
+        .rod2 img{
+            display: none;
+        }
+    
+        .localiza{
+            align-items: center;
+        }
+        .redes{
+            margin: 0;
+        }
+    
+        .localiza{
+            margin-right: 0;
+        }
+        
+    
+    
+    }
+    
+    @media(max-width:550px){
+        .timeline::after {
+            height: 39em;
+        }
+
+        .telefone{
+            width: 35%;
+        }
+        .redes{
+            margin: 0;
+        }
+    
+        .localiza{
+            margin-right: 0;
+        }
+    
+    }
+    @media(max-width:360px){
+        .timeline::after{
+            height: 40em;
+        }
+
+    }
+    @media(max-width:356px){
+        .timeline::after{
+            height: 60em;
+        }
+
+
+    }
+
+    .modal {
+        position: fixed;
+        top: 0;
+        left: 0;
+        background-color: rgba(30, 30, 30, 0.8);
+        width: 100vw;
+        height: 100vh;
+        z-index: 9999;
+        display: none;
+    }
+    .modal-content{
+        width: 30%;
+        height: 40%;
+        background: rgb(101, 223, 212);
+        border-radius: 10px 10px;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: auto;
+        margin-bottom: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .formulario{
+        display: flex;
+        flex-direction: column;
+       
+    }
+
+    .modal.opened
+    {
+        display: block;
+        
+        
+    }
+
+
+   
+
+
+

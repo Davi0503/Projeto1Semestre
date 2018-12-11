@@ -1,0 +1,53 @@
+    @using Projeto_Final.Models;
+    @using Microsoft.AspNetCore.Http;
+
+    @{
+    ViewBag.Title = "Depoimentos";
+    Layout = "Depoimentos";
+    }
+
+<head>
+    <link href="/css/Depoimentos/ListarDeslog.css" rel="stylesheet" type="text/css" />
+    <link href="/css/styleListar.css" rel="stylesheet" type="text/css" />
+
+</head>
+<body>
+    <div class="tabela">
+            <table>    
+                <tr>
+                    <td class="data">Data de Publicação</td>
+                    <td>Nome</td>
+                    <td>Depoimento</td>
+                </tr>
+            @foreach (var item in ViewData["banana"] as List<ComentarioModel>) {
+            @if(item.Aprovado == true && item.Ativo == true)
+            {
+            <tr class="row">
+                        <td class="data">
+                            @item.DataCriacao
+                        </td>
+                        <td>
+                            @item.Usuario.Nome
+                        </td>
+                        <td>
+                            @item.Texto
+                        </td>
+                    </tr>
+            }
+        }
+        </table>
+    </div>
+                    
+        
+         <a href="/Usuario/Deslogar">Deslogar</a>
+
+        
+
+
+        <footer>
+            <a href="/Usuario/Login">Escrever outro depoimento</a>
+        </footer>
+        
+        
+
+</body>

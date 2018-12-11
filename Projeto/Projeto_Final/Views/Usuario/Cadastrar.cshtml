@@ -1,0 +1,61 @@
+ @{
+    ViewBag.Title = "Depoimentos";
+    Layout = "Depoimentos";
+    }
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Cadastro</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="/css/Depoimentos/UsuarioCad.css" rel="stylesheet" type="text/css" />
+    <script src="main.js"></script>
+</head>
+
+<body>
+
+    <div class="formulario">
+    <header>
+        <h1>Cadastro de usuário</h1>
+    </header>
+    <main>
+        
+      
+        <form action="/Usuario/Cadastrar" method="POST">
+            <label>
+                Nome
+                <input type="text" class="borda-amarela" name="nome">
+            </label>
+
+            <label>
+                Email
+                <input type="email" name="email" >
+            </label>
+
+            <label>
+                Senha
+                <input type="password" name="senha" >
+            </label>
+
+          
+
+
+            <input type="submit" value="Enviar">
+
+              
+
+        </form>
+        @ViewBag.Mensagem
+
+    </main>
+
+    </div>
+    <footer>
+
+    </footer>
+</body>
+
+</html>

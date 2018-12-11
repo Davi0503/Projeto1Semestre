@@ -1,0 +1,290 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 17px;
+}
+
+
+.body{
+    width: 100%;
+    ;
+  
+}
+.toggle{
+    color:black;
+    height: 2em;
+    font-size: 2em;    
+    text-align: right;
+    padding: 0.5em;
+    display: none;    
+}
+
+
+.cabeca {
+    display: flex;
+    flex-direction: row;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    align-items: center;  
+    margin-top: 2em;
+    margin-bottom: 1em;  
+
+}
+
+.menu ul{
+    list-style: none;
+    display: flex;    
+    
+}
+
+.menu li{
+    margin-left: 2em;
+    font-size: 1.2rem;    
+}
+
+.menu li a{
+    text-decoration: none;
+    color: black;
+    transition: .2s;
+}
+.menu li a:hover{
+    color: red;
+}
+.logo {
+    width: 100px;
+    
+    
+}
+.banner{
+    width: 100%;
+    height: 450px;
+    background: url('../IMG/banner.jpg');
+    background-size: cover;  
+    margin-bottom: 2em; 
+    
+}
+
+
+
+
+/* Fim do header */
+
+.container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;    
+}
+
+.container h1{
+    margin-bottom: 1em;
+    font-size: 1.5em;
+}
+
+
+
+
+.pergresp{
+    
+    background: #D7F9F8;
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 10px 10px;
+    height: 5rem;
+    margin-top: 2rem;
+
+   
+
+}
+
+.pergresp > p{
+    margin-left: 3em;
+    margin-top: 1em;
+    
+}
+.pergunta{
+    background: rgb(101, 223, 212);
+    border-radius: 10px 10px;
+    padding: 0.5em;
+    
+}   
+
+/*fim do main*/
+
+
+.rod{
+    display: flex;
+    margin-top: 2em;
+
+}
+.rod2{
+    border-top: 1px solid black;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;
+}
+.rod2 img{
+    margin-top: 1em;
+}
+
+.redes{
+    margin-left: 2em;
+    display: flex;
+    justify-content: center;
+    align-items: center;    
+    flex-direction: column;
+}
+.icons{
+
+    margin-top: 1em;
+    font-size: 20px;
+    color: gray;
+
+}
+.localiza{
+    background: lightblue;
+    margin-right: 2em;
+    margin-top: 2em;
+    text-align: center;
+    padding: 0.5em;
+}
+.chat{
+    width: 50px;
+    height: 50px;
+    background: rgb(23, 135, 209);
+    position: fixed;
+    right: 2rem;
+    bottom: 0.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid rgb(5, 43, 5);
+    border-radius: 50%;
+}
+.chat i{
+    font-size: 30px;
+    color: rgb(66, 223, 79);    
+}
+
+@media screen and (max-width:984px){
+
+    .pergresp{   
+       
+        width: 70%;
+    }        
+    
+
+    .telefone{
+        width: 25%;
+    }
+    }
+    
+    
+    @media(max-width:720px){
+
+    .pergresp{
+        width: 80%;
+    }
+       
+     .cabeca{
+                justify-content: center;
+                align-items: center;
+                justify-content: space-between;
+            }
+    .toggle{
+         display: flex;            
+        
+     }            
+        
+    .menu ul{
+         flex-direction: column;
+         display: none;  
+     }
+    .menu ul.active{
+         display: flex;
+    }        
+
+        .rod2{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+    
+        .rod2 img{
+            display: none;
+        }
+    
+        .localiza{
+            align-items: center;
+            margin-right: 0;
+        }
+        .redes{
+            margin: 0;
+        }
+        
+    
+    
+    }
+    
+    @media(max-width:580px){
+        .pergresp{   
+            width: 90%;
+            height: 6em;
+        }  
+        .telefone{
+            width: 35%;
+        }
+        .redes{
+            margin: 0;
+        }
+    
+        .localiza{
+            margin-right: 0;
+        }
+    
+    }
+
+
+    .modal {
+        position: fixed;
+        top: 0;
+        left: 0;
+        background-color: rgba(30, 30, 30, 0.8);
+        width: 100vw;
+        height: 100vh;
+        z-index: 9999;
+        display: none;
+    }
+    .modal-content{
+        width: 30%;
+        height: 40%;
+        background: rgb(101, 223, 212);
+        border-radius: 10px 10px;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: auto;
+        margin-bottom: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .formulario{
+        display: flex;
+        flex-direction: column;
+       
+    }
+
+    .modal.opened
+    {
+        display: block;
+        
+        
+    }

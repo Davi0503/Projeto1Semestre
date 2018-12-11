@@ -1,0 +1,23 @@
+@using Projeto_Final.Models;
+
+
+@foreach (var item in ViewData["bananinha"] as List<UsuarioModel>)
+        {
+<table>
+            <tr>
+                <td>
+                    @item.Id
+                </td>
+                <td>
+                    @item.Nome
+                </td>
+                <td>
+                    @item.Email
+                </td>
+                <td>
+                    @item.Administrador
+                </td>
+                
+            </tr>
+        </table>
+        }

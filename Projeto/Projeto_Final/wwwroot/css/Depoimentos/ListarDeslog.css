@@ -1,0 +1,44 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+td.data{
+    /* background-color:  rgba(81, 179, 169, 0.671); */
+    width: 25%;
+}
+
+
+.tabela{
+    width: 60%;
+}
+
+table{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 20pt;
+    margin-top: 50px;
+    margin-bottom: 60px;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+th, td {
+    padding: 8px;
+    padding-top: 14px; 
+    padding-bottom: 5px; 
+    text-align: left;
+    border-bottom: 1px solid dodgerblue;
+}
+
+td a{
+    color: black;
+    text-decoration: underline;
+}
+
+ .row:hover {
+      transition: .2s;
+      background-color: rgba(180, 180, 180, .1);
+  }
+
+

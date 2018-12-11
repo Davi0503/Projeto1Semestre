@@ -1,0 +1,304 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 17px;
+}
+
+
+.body{
+    width: 100%;
+    ;
+  
+}
+
+.toggle{
+    color:black;
+    height: 2em;
+    font-size: 2em;    
+    text-align: right;
+    padding: 0.5em;
+    display: none;    
+}
+
+
+.cabeca {
+    display: flex;
+    flex-direction: row;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    align-items: center;  
+    margin-top: 2em;
+    margin-bottom: 1em;  
+
+}
+
+.menu ul{
+    list-style: none;
+    display: flex;    
+    
+}
+
+.menu li{
+    margin-left: 2em;
+    font-size: 1.2rem;    
+}
+
+.menu li a{
+    text-decoration: none;
+    color: black;
+    transition: .2s;
+}
+.menu li a:hover{
+    color: red;
+}
+.logo {
+    width: 100px;
+    
+    
+}
+.banner{
+    width: 100%;
+    height: 450px;
+    background: url('../IMG/banner.jpg');
+    background-size: cover;  
+    margin-bottom: 2em; 
+    
+}
+
+/*fim cabeça*/
+
+.container{
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.container h1{
+    margin-top: 2rem;
+    font-size: 1.5em;
+}
+
+.formulario{
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    background: #D7F9F8;
+    display: flex;
+    padding: 2em;
+    border-radius: 10px 10px;
+    box-shadow: 7px 7px 5px #aaaaaa;
+    margin-top: 3rem;
+    margin-bottom: 5rem;
+    
+}
+.pessoal{
+    width: 50%;
+    display: flex;
+    flex-direction: column; 
+
+}
+.pessoal input{
+    width: 90%;
+    margin-top: 1em;
+    margin-bottom: 1em;
+    border-radius: 7px 7px;
+    background:  rgba(81, 179, 169, 0.288);
+    border: 0.2em solid rgb(81, 179, 170);
+}
+.msg{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+.msg textarea{
+    width: 90%;
+    border-radius: 7px 7px;
+    background:  rgba(81, 179, 169, 0.288);
+    border: 0.2em solid rgb(81, 179, 170);
+    margin-top: 1rem;
+}
+
+.msg input{
+    width: 90%;
+    border-radius: 7px 7px;
+    background:   rgb(81, 179, 170);
+    border: 0.2em solid rgb(81, 179, 170);
+    margin-top: 1rem;
+}
+.telefone{
+    width: 13%;
+    margin-left: auto;
+    margin-right: auto;
+    background: #D7F9F8;
+    display: flex;
+    flex-direction: column;
+    padding: 1em;
+    border-radius: 10px 10px;
+    box-shadow: 7px 7px 5px #aaaaaa;
+    margin-top: 1rem;
+    margin-bottom: 5rem;
+    align-items: center;
+}
+
+.telefone p{
+    margin-bottom: 1rem;
+}
+
+/*início rod*/
+
+.rod{
+    display: flex;
+    margin-top: 2em;
+
+}
+.rod2{
+    border-top: 1px solid black;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;
+}
+.rod2 img{
+    margin-top: 1em;
+}
+
+.redes{
+    margin-left: 2em;
+    display: flex;
+    justify-content: center;
+    align-items: center;    
+    flex-direction: column;
+}
+.icons{
+
+    margin-top: 1em;
+    font-size: 20px;
+    color: gray;
+
+}
+.localiza{
+    background: lightblue;
+    margin-right: 2em;
+    margin-top: 2em;
+    text-align: center;
+    padding: 0.5em;
+}
+.chat{
+    width: 50px;
+    height: 50px;
+    background: rgb(23, 135, 209);
+    position: fixed;
+    right: 2rem;
+    bottom: 0.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid rgb(5, 43, 5);
+    border-radius: 50%;
+}
+.chat i{
+    font-size: 30px;
+    color: rgb(66, 223, 79);    
+}
+
+
+@media screen and (max-width:984px){
+
+    .telefone{
+        width: 25%;
+    }
+    }
+    
+    
+    @media(max-width:720px){
+     .cabeca{
+                justify-content: center;
+                align-items: center;
+                justify-content: space-between;
+            }
+    .toggle{
+         display: flex;            
+        
+     }
+    
+            
+        
+    .menu ul{
+         flex-direction: column;
+         display: none;  
+     }
+    .menu ul.active{
+         display: flex;
+    }
+        
+    
+        .formulario{
+            display: flex;
+            flex-direction: column;
+            align-items: center;       
+    
+        }
+        .pessoal{
+            width: 90%;
+        }
+    
+        .msg{
+            width: 90%;
+        }
+        .rod2{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+    
+        .rod2 img{
+            display: none;
+        }
+    
+        .localiza{
+            align-items: center;
+        }
+        .redes{
+            margin: 0;
+        }
+    
+        .localiza{
+            margin-right: 0;
+        }
+        
+    
+    
+    }
+    
+    @media(max-width:550px){
+        .pessoal{
+            width: 100%;
+        }
+    
+        .msg{
+            width: 100%;
+        }
+        
+        .telefone{
+            width: 35%;
+        }
+        .redes{
+            
+            margin: 0;
+        }
+    
+        .localiza{
+            margin-right: 0;
+        }
+    
+    }

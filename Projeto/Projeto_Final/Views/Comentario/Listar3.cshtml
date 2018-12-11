@@ -1,0 +1,52 @@
+@using Projeto_Final.Models;
+@using Microsoft.AspNetCore.Http;
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Comentarios</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    <script src="main.js"></script>
+</head>
+
+<body>
+
+    @foreach (var item in ViewData["banana"] as List<ComentarioModel>)
+        {
+            if(item.Aprovado == true && item.Ativo == true){
+        <table>
+            <tr>
+                <td>
+                    @item.DataCriacao
+                </td>
+                <td>
+                    @item.Usuario.Nome
+                </td>
+                <td>
+                    @item.Texto
+                </td>               
+
+            </tr>
+        </table>
+            }
+        }
+
+        
+         
+        
+        <a href="/Usuario/Deslogar">Deslogar</a>
+
+        
+
+
+        <footer>
+            <a href="/Usuario/Login">Escrever comentário</a>
+        </footer>
+        
+
+</body>
+
+</html>

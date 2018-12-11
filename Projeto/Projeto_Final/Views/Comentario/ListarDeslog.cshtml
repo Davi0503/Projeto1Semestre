@@ -1,0 +1,60 @@
+@using Projeto_Final.Models;
+@using Microsoft.AspNetCore.Http;
+@using System.Linq;
+
+ @{
+    ViewBag.Title = "Depoimentos";
+    Layout = "Depoimentos";
+    }
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Comentarios</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="/css/Depoimentos/ListarDeslog.css" rel="stylesheet" type="text/css" />
+    <script src="main.js"></script>
+</head>
+
+<body>
+        <div class="tabela">
+            <table>    
+                <tr>
+                    <td class="data">Data de Publicação</td>
+                    <td>Nome</td>
+                    <td>Depoimento</td>
+                </tr>
+            @foreach (var item in ViewData["banana"] as List<ComentarioModel>) {
+                @if(item.Aprovado == true && item.Ativo == true) 
+                {
+                    <tr class="row">
+                        <td class="data">
+                            @item.DataCriacao
+                        </td>
+                        <td>
+                            @item.Usuario.Nome
+                        </td>
+                        <td>
+                            @item.Texto
+                        </td>
+                    </tr>
+                }
+            }
+            </table>
+        </div>
+        
+        <div class="login">
+            <p>escreva seu depoimento também</p> 
+            <a href="/Comentario/Cadastrar">Fazer Login</a>           
+        </div>
+
+
+       
+        
+
+</body>
+
+</html>

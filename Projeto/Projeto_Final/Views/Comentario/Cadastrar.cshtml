@@ -1,0 +1,42 @@
+@using Projeto_Final.Models
+
+
+ @{
+    ViewBag.Title = "Depoimentos";
+    Layout = "Depoimentos";
+    }
+
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Depoimentos</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="/css/Depoimentos/ComentarioCad.css" rel="stylesheet" type="text/css" />
+    <script src="main.js"></script>
+</head>
+<body>
+    <div class="formulario">
+    <h1>Tela de Cadastro de comentário</h1>
+
+    
+    @ViewBag.Mensagem
+
+    <form action="/Comentario/Cadastrar" method="Post">
+    <label>
+        Insira seu comentario para aprovação:
+        <textarea required="true" rows="4" cols="50"></textarea>
+    </label>
+
+    <input type="submit" value="Enviar">
+
+    </form>
+
+    </div>
+   
+    
+</body>
+</html>

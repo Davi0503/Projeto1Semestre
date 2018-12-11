@@ -1,0 +1,29 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.formulario{
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+    background-color:  rgba(83, 255, 238, 0.575);
+    align-items: center;
+    padding: 1em;
+    border-radius: 10px;
+    box-shadow: 8px 8px 5px #aaaaaa;
+}
+input{
+    margin-bottom: 2em;
+    border: none;
+    border-radius: 5px;
+    background-color: rgba(16, 100, 92, 0.575);
+    color: aliceblue;
+    padding: 0.2em;
+}
+form{
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+}
